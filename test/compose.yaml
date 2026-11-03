@@ -1,0 +1,46 @@
+name: notes-go-compat
+
+# Disposable local dependencies only. These credentials never belong in a
+# deployment. All published ports bind to loopback and are assigned by Docker.
+services:
+  postgres:
+    image: pgvector/pgvector@sha256:c55d7e7deac05dde62139e0ded4fcf4f58363656cbc382dbea82fbed995aa767
+    environment:
+      POSTGRES_USER: notes
+      POSTGRES_PASSWORD: notes
+      POSTGRES_DB: notes_test
+    ports:
+      - target: 5432
+        published: "0"
+        host_ip: 127.0.0.1
+    healthcheck:
+      test: [CMD, pg_isready, -U, notes, -d, notes_test]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+  redis:
+    image: redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499
+    ports:
+      - target: 6379
+        published: "0"
+        host_ip: 127.0.0.1
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+  s3:
+    image: rustfs/rustfs@sha256:9ca9559533b537d10482fe923288b676ad08f92a7069d9a17327fbae3cab688b
+    environment:
+      RUSTFS_ACCESS_KEY: notes_test_access
+      RUSTFS_SECRET_KEY: notes_test_secret
+      RUSTFS_CONSOLE_ENABLE: "false"
+    ports:
+      - target: 9000
+        published: "0"
+        host_ip: 127.0.0.1
+    healthcheck:
+      test: [CMD, curl, -fsS, http://127.0.0.1:9000/health]
+      interval: 2s
+      timeout: 2s
+      retries: 30

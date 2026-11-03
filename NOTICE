@@ -1,0 +1,69 @@
+FydeOS Notes Backend
+Copyright (c) 2026 Fyde Innovations Limited
+
+This product is licensed under the MIT License.
+See the LICENSE file in this directory for the full license text.
+
+This file lists third-party components and the notices their licenses
+require to be distributed with this product.
+
+This product is a Go server for FydeOS Notes. It speaks the client protocols
+of the AFFiNE editor that FydeOS Notes is built on, so some protocol names,
+HTTP headers, cookie names, document block types and environment variables
+contain the word "affine". These names are kept only for compatibility with
+existing clients, documents and deployments. This product is not affiliated
+with, endorsed by, or sponsored by TOEVERYTHING PTE. LTD. or the AFFiNE
+project. "AFFiNE" is a trademark of its respective owner.
+
+==========================================================================
+Third-party components
+==========================================================================
+
+Go module dependencies are listed in go.mod and are distributed under their
+own licenses. Run `make third-party-licenses` to collect the license text of
+every dependency linked into the binary. Ship that directory together with
+any binary or container image you distribute.
+
+--------------------------------------------------------------------------
+Bundled data
+--------------------------------------------------------------------------
+
+internal/invitelinks/unicode_skeleton_data.go is generated from the
+unicode_skeleton crate, version 0.1.1.
+Copyright (c) 2016 Peter Reid. Licensed under the MIT License; see
+third_party/unicode-skeleton/LICENSE-MIT.
+
+That data is derived from the Unicode Security Mechanisms (UTS #39)
+confusables data, version 10.0.0.
+Copyright (c) 1991-2017 Unicode, Inc. Distributed under the Unicode License
+(https://www.unicode.org/license.txt).
+
+--------------------------------------------------------------------------
+Notices from Apache-2.0 dependencies
+--------------------------------------------------------------------------
+
+github.com/aws/aws-sdk-go-v2:
+
+  AWS SDK for Go
+  Copyright 2015 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+  Copyright 2014-2015 Stripe, Inc.
+
+github.com/aws/smithy-go:
+
+  Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+github.com/coreos/go-oidc/v3:
+
+  CoreOS Project
+  Copyright 2014 CoreOS, Inc
+
+  This product includes software developed at CoreOS, Inc.
+  (http://www.coreos.com/).
+
+--------------------------------------------------------------------------
+MPL-2.0 dependency
+--------------------------------------------------------------------------
+
+github.com/hashicorp/golang-lru/v2 is licensed under the Mozilla Public
+License, version 2.0, and is used without modification. Its source code is
+available at https://github.com/hashicorp/golang-lru (version v2.0.7).

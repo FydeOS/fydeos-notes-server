@@ -1,0 +1,130 @@
+{
+  "source": "packages/common/reader/src/reader.ts",
+  "spaceId": "preview-space",
+  "docId": "preview-doc",
+  "summary": "Before referenceSee   nowTaskNesteda\nb\nc\nd\ne\nfRowOther note only",
+  "update": "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",
+  "expected": [
+    {
+      "blockId": "heading",
+      "additional": {
+        "displayMode": "page",
+        "noteBlockId": "note"
+      },
+      "refDocId": []
+    },
+    {
+      "blockId": "reference",
+      "markdownPreview": "## Before reference\n\nSee [](/workspace/preview-space/target-doc?mode=page)**&#x20;now**\n\n* [x] Task\n\n* Nested\n\n\n```go\na\nb\nc\n...\n```\n\nan image block, file id image-blob, with caption Image caption\n",
+      "additional": {
+        "displayMode": "page",
+        "noteBlockId": "note"
+      },
+      "refDocId": ["target-doc"]
+    },
+    {
+      "blockId": "todo",
+      "additional": {
+        "displayMode": "page",
+        "noteBlockId": "note"
+      },
+      "refDocId": []
+    },
+    {
+      "blockId": "nested",
+      "additional": {
+        "displayMode": "page",
+        "noteBlockId": "note"
+      },
+      "refDocId": []
+    },
+    {
+      "blockId": "code",
+      "additional": {
+        "displayMode": "page",
+        "noteBlockId": "note"
+      },
+      "refDocId": []
+    },
+    {
+      "blockId": "image",
+      "additional": {
+        "displayMode": "page",
+        "noteBlockId": "note"
+      }
+    },
+    {
+      "blockId": "attachment",
+      "additional": {
+        "displayMode": "page",
+        "noteBlockId": "note"
+      }
+    },
+    {
+      "blockId": "bookmark",
+      "additional": {
+        "displayMode": "page",
+        "noteBlockId": "note"
+      }
+    },
+    {
+      "blockId": "latex",
+      "additional": {
+        "displayMode": "page",
+        "noteBlockId": "note"
+      }
+    },
+    {
+      "blockId": "table",
+      "additional": {
+        "displayMode": "page",
+        "noteBlockId": "note"
+      }
+    },
+    {
+      "blockId": "database",
+      "markdownPreview": "[table][](/workspace/preview-space/preview-doc?blockIds=table)\n\n[database · Data][](/workspace/preview-space/preview-doc?blockIds=database)\n\n[](/workspace/preview-space/preview-doc?blockIds=embed)\n",
+      "additional": {
+        "displayMode": "page",
+        "noteBlockId": "note",
+        "databaseName": "Data"
+      },
+      "refDocId": ["database-ref"]
+    },
+    {
+      "blockId": "row",
+      "additional": {
+        "displayMode": "page",
+        "noteBlockId": "note",
+        "databaseName": "Data"
+      },
+      "refDocId": []
+    },
+    {
+      "blockId": "embed",
+      "markdownPreview": "[database · Data][](/workspace/preview-space/preview-doc?blockIds=database)\n\n[](/workspace/preview-space/preview-doc?blockIds=embed)\n",
+      "additional": {
+        "displayMode": "page",
+        "noteBlockId": "note"
+      },
+      "refDocId": ["target-doc"]
+    },
+    {
+      "blockId": "other-ref",
+      "markdownPreview": "[](/workspace/preview-space/preview-doc?blockIds=other-ref)\n\n> Other note only\n",
+      "additional": {
+        "displayMode": "edgeless",
+        "noteBlockId": "other-note"
+      },
+      "refDocId": ["target-doc"]
+    },
+    {
+      "blockId": "other-tail",
+      "additional": {
+        "displayMode": "edgeless",
+        "noteBlockId": "other-note"
+      },
+      "refDocId": []
+    }
+  ]
+}

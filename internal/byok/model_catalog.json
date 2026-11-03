@@ -1,0 +1,333 @@
+{
+  "version": "855255a7acf235cb",
+  "providers": [
+    {
+      "provider": "anthropic",
+      "models": [
+        {
+          "modelId": "claude-opus-5-5",
+          "displayName": "Claude Opus 5.5",
+          "recommended": true,
+          "capabilities": [
+            {
+              "input": ["text", "image"],
+              "output": ["text", "object", "structured"],
+              "features": ["tool_calling", "reasoning"],
+              "attachmentKinds": ["image"],
+              "attachmentSources": ["url", "data", "bytes"]
+            }
+          ]
+        },
+        {
+          "modelId": "claude-sonnet-5-5",
+          "displayName": "Claude Sonnet 5.5",
+          "recommended": true,
+          "capabilities": [
+            {
+              "input": ["text", "image"],
+              "output": ["text", "object", "structured"],
+              "features": ["tool_calling", "reasoning"],
+              "attachmentKinds": ["image"],
+              "attachmentSources": ["url", "data", "bytes"]
+            }
+          ]
+        },
+        {
+          "modelId": "claude-haiku-5-5",
+          "displayName": "Claude Haiku 5.5",
+          "recommended": false,
+          "capabilities": [
+            {
+              "input": ["text", "image"],
+              "output": ["text", "object", "structured"],
+              "features": ["tool_calling", "reasoning"],
+              "attachmentKinds": ["image"],
+              "attachmentSources": ["url", "data", "bytes"]
+            }
+          ]
+        },
+        {
+          "modelId": "claude-fable-5-1",
+          "displayName": "Claude Fable 5.1",
+          "recommended": false,
+          "capabilities": [
+            {
+              "input": ["text", "image"],
+              "output": ["text", "object", "structured"],
+              "features": ["tool_calling", "reasoning"],
+              "attachmentKinds": ["image"],
+              "attachmentSources": ["url", "data", "bytes"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider": "fal",
+      "models": [
+        {
+          "modelId": "flux-1/schnell",
+          "displayName": "FLUX.1 [schnell]",
+          "recommended": true,
+          "capabilities": [
+            {
+              "input": ["text"],
+              "output": ["image"],
+              "features": [],
+              "attachmentKinds": [],
+              "attachmentSources": []
+            }
+          ]
+        },
+        {
+          "modelId": "flux-1/dev",
+          "displayName": "FLUX.1 [dev]",
+          "recommended": false,
+          "capabilities": [
+            {
+              "input": ["text"],
+              "output": ["image"],
+              "features": [],
+              "attachmentKinds": [],
+              "attachmentSources": []
+            }
+          ]
+        },
+        {
+          "modelId": "flux-1/dev/image-to-image",
+          "displayName": "FLUX.1 [dev] Image to Image",
+          "recommended": false,
+          "capabilities": [
+            {
+              "input": ["text", "image"],
+              "output": ["image"],
+              "features": [],
+              "attachmentKinds": ["image"],
+              "attachmentSources": ["url", "data"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider": "gemini",
+      "models": [
+        {
+          "modelId": "gemini-3.8-flash",
+          "displayName": "Gemini 3.8 Flash",
+          "recommended": true,
+          "capabilities": [
+            {
+              "input": ["text", "image", "audio", "file"],
+              "output": ["text", "object", "structured"],
+              "features": ["tool_calling", "reasoning"],
+              "attachmentKinds": ["image", "audio", "file"],
+              "attachmentSources": ["url", "data", "bytes", "file_handle"]
+            }
+          ]
+        },
+        {
+          "modelId": "gemini-4-argon",
+          "displayName": "Gemini 4 Argon",
+          "recommended": false,
+          "capabilities": [
+            {
+              "input": ["text", "image", "audio", "file"],
+              "output": ["text", "object", "structured"],
+              "features": ["tool_calling", "reasoning"],
+              "attachmentKinds": ["image", "audio", "file"],
+              "attachmentSources": ["url", "data", "bytes", "file_handle"]
+            }
+          ]
+        },
+        {
+          "modelId": "gemini-3.5-flash-lite",
+          "displayName": "Gemini 3.5 Flash-Lite",
+          "recommended": false,
+          "capabilities": [
+            {
+              "input": ["text", "image", "audio", "file"],
+              "output": ["text", "object", "structured"],
+              "features": ["tool_calling", "reasoning"],
+              "attachmentKinds": ["image", "audio", "file"],
+              "attachmentSources": ["url", "data", "bytes", "file_handle"]
+            }
+          ]
+        },
+        {
+          "modelId": "gemini-nano-banana-2.1",
+          "displayName": "Nano Banana 2.1",
+          "recommended": true,
+          "capabilities": [
+            {
+              "input": ["text", "image"],
+              "output": ["image"],
+              "features": [],
+              "attachmentKinds": ["image"],
+              "attachmentSources": ["url", "data", "bytes", "file_handle"]
+            }
+          ]
+        },
+        {
+          "modelId": "gemini-3.1-flash-lite-image",
+          "displayName": "Nano Banana 2 Lite",
+          "recommended": false,
+          "capabilities": [
+            {
+              "input": ["text", "image"],
+              "output": ["image"],
+              "features": [],
+              "attachmentKinds": ["image"],
+              "attachmentSources": ["url", "data", "bytes", "file_handle"]
+            }
+          ]
+        },
+        {
+          "modelId": "gemini-embedding-001",
+          "displayName": "Gemini Embedding",
+          "recommended": true,
+          "capabilities": [
+            {
+              "input": ["text"],
+              "output": ["embedding"],
+              "features": [],
+              "attachmentKinds": [],
+              "attachmentSources": []
+            }
+          ]
+        },
+        {
+          "modelId": "gemini-embedding-2",
+          "displayName": "Gemini Embedding 2",
+          "recommended": false,
+          "capabilities": [
+            {
+              "input": ["text"],
+              "output": ["embedding"],
+              "features": [],
+              "attachmentKinds": [],
+              "attachmentSources": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider": "openai",
+      "models": [
+        {
+          "modelId": "gpt-6.1-sol",
+          "displayName": "GPT-6.1 Sol",
+          "recommended": true,
+          "capabilities": [
+            {
+              "input": ["text", "image"],
+              "output": ["text", "object", "structured"],
+              "features": ["tool_calling", "reasoning"],
+              "attachmentKinds": ["image"],
+              "attachmentSources": ["url", "data", "bytes"]
+            }
+          ]
+        },
+        {
+          "modelId": "gpt-6-astra",
+          "displayName": "GPT-6 Astra",
+          "recommended": false,
+          "capabilities": [
+            {
+              "input": ["text", "image"],
+              "output": ["text", "object", "structured"],
+              "features": ["tool_calling", "reasoning"],
+              "attachmentKinds": ["image"],
+              "attachmentSources": ["url", "data", "bytes"]
+            }
+          ]
+        },
+        {
+          "modelId": "gpt-6.1-terra",
+          "displayName": "GPT-6.1 Terra",
+          "recommended": false,
+          "capabilities": [
+            {
+              "input": ["text", "image"],
+              "output": ["text", "object", "structured"],
+              "features": ["tool_calling", "reasoning"],
+              "attachmentKinds": ["image"],
+              "attachmentSources": ["url", "data", "bytes"]
+            }
+          ]
+        },
+        {
+          "modelId": "gpt-6-luna",
+          "displayName": "GPT-6 Luna",
+          "recommended": false,
+          "capabilities": [
+            {
+              "input": ["text", "image"],
+              "output": ["text", "object", "structured"],
+              "features": ["tool_calling", "reasoning"],
+              "attachmentKinds": ["image"],
+              "attachmentSources": ["url", "data", "bytes"]
+            }
+          ]
+        },
+        {
+          "modelId": "gpt-image-2.5-sunburst",
+          "displayName": "GPT-Image-2.5 Sunburst",
+          "recommended": true,
+          "capabilities": [
+            {
+              "input": ["text", "image"],
+              "output": ["image"],
+              "features": [],
+              "attachmentKinds": ["image"],
+              "attachmentSources": ["data", "bytes"]
+            }
+          ]
+        },
+        {
+          "modelId": "gpt-image-2.5-flare",
+          "displayName": "GPT-Image-2.5 Flare",
+          "recommended": false,
+          "capabilities": [
+            {
+              "input": ["text", "image"],
+              "output": ["image"],
+              "features": [],
+              "attachmentKinds": ["image"],
+              "attachmentSources": ["data", "bytes"]
+            }
+          ]
+        },
+        {
+          "modelId": "text-embedding-3-small",
+          "displayName": "text-embedding-3-small",
+          "recommended": true,
+          "capabilities": [
+            {
+              "input": ["text"],
+              "output": ["embedding"],
+              "features": [],
+              "attachmentKinds": [],
+              "attachmentSources": []
+            }
+          ]
+        },
+        {
+          "modelId": "text-embedding-3-large",
+          "displayName": "text-embedding-3-large",
+          "recommended": false,
+          "capabilities": [
+            {
+              "input": ["text"],
+              "output": ["embedding"],
+              "features": [],
+              "attachmentKinds": [],
+              "attachmentSources": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+# Copyright (c) 2026 Fyde Innovations Limited
+# SPDX-License-Identifier: MIT
+#
+# Example single-host deployment. Change every secret before use.
+#
+#   docker compose -f deploy/compose.yaml up -d
+#
+# Then create the first administrator, either from /admin/setup in the web app
+# or with POST /api/setup/create-admin-user (see README.md).
+
+x-notes-env: &notes-env
+  DATABASE_URL: postgres://notes:change-me@postgres:5432/notes
+  REDIS_SERVER_URL: redis://redis:6379/0
+  NOTES_PRIVATE_KEY_SECRET: change-me-to-a-long-random-string
+  AFFINE_SERVER_EXTERNAL_URL: http://localhost:3010
+
+services:
+  # Prepares the database, then exits. The server starts after it succeeds.
+  migrate:
+    build: ..
+    environment: *notes-env
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - /app/fydeos-notes-server migrate && /app/fydeos-notes-server ensure-private-key
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
+
+  server:
+    build: ..
+    environment: *notes-env
+    ports:
+      - "3010:3010"
+    volumes:
+      - storage:/var/lib/notes/.affine/storage
+      # - ./static:/app/static:ro   # optional: a built web app
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: notes
+      POSTGRES_PASSWORD: change-me
+      POSTGRES_DB: notes
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD, pg_isready, -U, notes, -d, notes]
+      interval: 2s
+      retries: 30
+
+  redis:
+    image: redis:7
+    volumes:
+      - redis:/data
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 2s
+      retries: 30
+
+volumes:
+  postgres:
+  redis:
+  storage:

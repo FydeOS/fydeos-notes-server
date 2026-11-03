@@ -1,0 +1,32 @@
+schema:
+  - internal/graphql/schema.graphqls
+
+exec:
+  filename: internal/graphql/generated.go
+  package: graphql
+
+model:
+  filename: internal/graphql/model/models_gen.go
+  package: model
+
+resolver:
+  layout: follow-schema
+  dir: internal/graphql
+  package: graphql
+
+models:
+  ID:
+    model:
+      - github.com/99designs/gqlgen/graphql.ID
+  Upload:
+    model:
+      - github.com/99designs/gqlgen/graphql.Upload
+  JSONObject:
+    model:
+      - github.com/fydeos/fydeos-notes-server/internal/graphql/model.JSONObject
+  JSON:
+    model:
+      - github.com/fydeos/fydeos-notes-server/internal/graphql/model.JSON
+  SafeInt:
+    model:
+      - github.com/99designs/gqlgen/graphql.Int64
